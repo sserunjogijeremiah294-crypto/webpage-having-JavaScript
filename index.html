@@ -1,0 +1,131 @@
+<html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web page with Javascript</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-menu">
+
+            <h1 id="heading1">TRUST  SHIPPING COMPANY <br> LIMITED</h1>
+
+
+            <input type="search" value="search" placeholder="search">
+           
+        </div>
+        <div id="lfsidebar"> <p>TSCL</p> <hr><br><br>
+
+            <a href="index.html"> <button  style="width: 100%;">HOME</button> </a><br><br>
+            <a href="form4.html"> <button  style="width: 100%;">REGISTER</button> </a><br><br>
+            <a href="helpcenter.html"> <button style="width: 100%;">CONTACTS</button> </a><br><br>
+          <br><br>
+            
+               <p> <b>BY INDUSTRY</b><hr>
+                        FMCG <br>
+                        Fashion & Lifestyle <br>
+                        Retail <br>
+                        Chemicals <br>
+                        Automotive <br>
+                        Technology <br>
+                        Pharma & Healthcare <br>
+                        Perishables <br>
+                        Solutions <br>
+</p>
+<br><br><br>
+<a href="login.html"><button type="submit">LOGIN</button></a>
+
+        </div>
+        <div id="main-content">
+            <p>INFORMATION AND SERVICES</p>
+            <hr>
+                    <p4>Simplify your shipping with TRUST SCL</p4>
+                    <br>
+                <div id="firstBlock">
+                    <p1> <br><br>
+                        <video id="video" controls>
+                            <source src="video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video><br><br>
+                        We understand that even the smallest cargo can have the biggest impact on your business,
+                        so we keep it moving. LCL is ideal for small and medium enterprises who may not have sufficient volume
+                        to fill a full container or large and medium enterprises (LMEs) who have varying demands or want to test out new markets.
+                    </p1>
+                </div>
+
+                <div id="secondBlock" style="display: none;">
+                    <p2> <br><br><img src="office.jpg" alt=""><br><br>
+                        When you choose LCL, we coordinate, consolidate, and transport your smaller quantities of cargo
+                        with other LCL shipments and ensure that you pay as per your utilisation. TRUST SHIPPING COMPANY LIMITED LCL reduces complexities,
+                        delivers visibility, and provides the advantage of asset ownership to ensure that you always get a reliable solution
+                        tailored to your needs. This enables you to make and fulfil a delivery promise. By using our digital tools,
+                        you also get full transparency all the way till your customer's doorsteps.
+                    </p2>
+                </div><br><br>
+
+                <button type="button" onclick="showSecond()">Show second paragraph</button><br>
+                <button type="button" onclick="showFirst()">Show first paragraph</button>
+
+        </div><br><br>
+       
+        <br>
+        <br>
+        <hr>
+
+        <div class="flex-container"><br>
+
+           <p3> WHY WE ARE THE BEST <br><br>
+Trust Shipping Company Limited is your smart and trusted removals and relocations company. <br>
+Our enthusiastic staffs are highly trained and are recruited after rigorous background checks to <br>
+ensure we have only the best. Our superior equipment and packaging ensure your personal goods <br>
+not only move in style but are also handled with utmost care Our Credentials.
+        </p3>
+
+            <br><br>
+            <div id="f1">AIM <br><br> EFFICIENCY IN BUSINESS IS OUR MAJOR AIM</div>
+            <div id="f2">MOTTO <br><br> Providing reliable services a with unmatched speed and safety.</div>
+            <div id="f3">VISION <br><br> TO DELIVER THE WORLD CLOSER, ONE SHIPPMENT AT A TIME.</div>
+
+        </div>
+
+            <footer style="text-align:center; margin:20px 0; color:#fafafa;">
+                 &copy; 2026 Trust Shipping Company Limited. All rights reserved.
+            </footer>
+
+    </div>
+
+    <script>
+        function showSecond() {
+            document.getElementById('firstBlock').style.display = 'none';
+            document.getElementById('secondBlock').style.display = 'block';
+        }
+
+        function showFirst() {
+            document.getElementById('firstBlock').style.display = 'block';
+            document.getElementById('secondBlock').style.display = 'none';
+        }
+
+       let text =document.getElementById("heading1");
+       let opacity = 1;
+       let fadeout = true;
+        setInterval(function(){
+            if(fadeout){
+                opacity -= 0.01;
+                if(opacity <= 0){
+                    fadeout = false;
+                }
+            }else{
+                opacity += 0.01;
+                if(opacity >= 1){
+                    fadeout = true;
+                }
+            }
+            text.style.opacity = opacity;
+        },50);
+
+    </script>
+
+   
+</body>
+</html></html>
